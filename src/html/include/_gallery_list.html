@@ -1,0 +1,10 @@
+
+<ul class="resume_gallery_list">
+    @@for (var i = 0; i < arr.length; i++) {
+        <li class="resume_gallery_item">
+            <a href="`+ arr[i].link +`" target="_blank" class="resume_gallery_link" style="background-image: url(./img/`+ arr[i].img +`);">
+                <span class="resume_gallery_text">`+ arr[i].name +`</span>
+            </a>
+        </li>
+    }
+</ul>

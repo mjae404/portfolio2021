@@ -1,0 +1,8 @@
+<div class="resume_details_wrap">
+    @@for (var i = 0; i < arr.length; i++) {
+        <dl class="resume_details order`+ arr[i].order +`">
+            <dt class="resume_title">`+ arr[i].title +` <span class="resume_text">`+ arr[i].sub_title +`</span></dt>
+            <dd class="resume_contents resume_date">`+ arr[i].date +`</dd>
+        </dl>
+    }
+</div>

@@ -1,0 +1,340 @@
+.resume {
+    &_area {
+        margin-left: 40%;
+        margin-top: -55px;
+        padding: 0 150px 20px 30px;
+    } // .resume_area
+
+    &_about {
+        &_list {
+            margin-bottom: 30px;
+        } // .resume_about_list
+
+        &_item {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 20px;
+
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 10px;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: -7px;
+                    width: 1px;
+                    height: 15px;
+                    background-color: $gray2;
+                    transform: translateY(-50%);
+                    content: '';
+                }
+            }
+        } // .resume_about_item
+
+        &_text {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        } // .resume_about_text
+    }
+
+    &_details {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+
+        @at-root .resume_details_wrap & {
+            margin-bottom: 10px;
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        @at-root .resume_details_wrap:last-of-type & {
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-of-type) {
+                margin-bottom: 15px;
+                border-bottom: 1px solid $gray6;
+            }
+        } // .resume_dtails_wrap
+    } // .resume_details
+
+    &_title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        order: 1;
+    } // .resume_title
+
+    &_contents {
+        margin: 0;
+    } // .resume_contents
+
+    &_date {
+        color: $primary;
+        font-size: 18px;
+        line-height: 29px;
+        font-weight: lighter;
+    } // .resume_date
+
+    &_sub_title {
+        margin-bottom: 5px;
+        font-size: 16px;
+        order: 1;
+    } // .resume_sub_title
+
+    &_text {
+        font-size: 13px;
+        font-weight: normal;
+        color: $gray3;
+        order: 1;
+    } // .resume_text
+
+    &_career_desc {
+        margin-top: 10px;
+        order: 1;
+
+        &.on .resume_career_desc_wrap {
+            display: block;
+        }
+
+        &_button {
+            position: relative;
+            font-size: 13px;
+            color: $gray3;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: -5px;
+                width: 6px;
+                height: 6px;
+                border-width: 1px 1px 0 0;
+                border-style: solid;
+                border-color: $gray3;
+                transform: rotate(45deg) translateY(-50%);
+                content: '';
+            }
+        } // .resume_career_desc_button
+
+        &_wrap {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow-y: auto;
+            max-width: 800px;
+            width: calc(100% - 40px);
+            max-height: calc(100% - 40px);
+            padding: 20px;
+            z-index: 100;
+            border: 1px solid $gray3;
+            background-color: $white;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+        } // .resume_career_desc_wrap
+
+        &_title {
+            margin-bottom: 10px;
+            padding-right: 30px;
+            font-size: 20px;
+            line-height: 20px;
+        } // .resume_career_desc_title
+
+        &_text {
+            font-size: 13px;
+            color: $gray2;
+
+            &_wrap {
+                width: 100%;
+                height: 350px;
+                overflow-y: auto;
+    
+                .resume_gallery_list {
+                    margin: 30px 0 0 0;
+                }
+            } // .resume_career_desc_text_wrap
+        } // .resume_career_desc_text
+
+        &_list {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid $gray5;
+        } // .resume_career_desc_list
+
+        &_item {
+            display: inline-block;
+
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 12px;
+    
+                &::after {
+                    display: block;
+                    position: absolute;
+                    right: -7px;
+                    top: 50%;
+                    width: 2px;
+                    height: 2px;
+                    background-color: $gray3;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                    content: '';
+                }
+            }
+        } // .resume_career_desc_item
+
+        &_close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background: url(../img/x-mark.svg) no-repeat center center / cover;
+        } // .resume_career_desc_close
+    } // .resume_career_desc
+
+    &_career {
+        &_list {
+            margin-top: 30px;
+        }
+
+        &_item {
+            &::before {
+                content: '─ ';
+            }
+        }
+    }
+
+    &_gallery {
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        } // .resume_gallery_list
+
+        &_item {
+            overflow: hidden;
+            width: 20%;
+            padding: 5px;
+            box-sizing: border-box;
+        }// .resume_gallery_item
+
+        &_link {
+            display: block;
+            position: relative;
+            padding-top: 100%;
+            border: 1px solid $gray5;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                transition: opacity 0.2s;
+                opacity: 0;
+                content: '';
+            }
+
+            &:hover::before {
+                opacity: 1;
+            }
+        }// .resume_gallery_link
+
+        &_text {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            text-align: center;
+            transition: opacity 0.2s;
+            opacity: 0;
+            box-sizing: border-box;
+
+            @at-root .resume_gallery_link:hover & {
+                opacity: 1;
+            }
+        }// .resume_gallery_text
+    }
+
+    &_contact {
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px;
+        } // .resume_contact_list
+        
+        &_item {
+            width: 33.33%;
+            padding: 5px;
+            box-sizing: border-box;
+        } // .resume_contact_item
+
+        &_link {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid $gray4;
+            text-align: center;
+            line-height: 20px;
+            box-sizing: border-box;
+            color: $gray3;
+
+            &:hover {
+                color: $gray1;
+                font-weight: bold;
+                border-color: $primary;
+            }
+        } // .resume_contact_link
+    }
+
+    &_dimmed {
+        display: none;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 80;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        @at-root .on & {
+            display: block;
+        }
+    } // .resume_dimmed
+}

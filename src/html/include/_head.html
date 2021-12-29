@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<meta name="author" content="minjee kim">
+<meta name="description" content="견고한 코드를 작성하는 마크업 개발자 김민지의 포트폴리오">
+<meta name="kewords" content="마크업 개발자, 퍼블리셔, 포트폴리오, 웹퍼블리셔 포트폴리오, 마크업 개발자 포트폴리오, mjae, 김민지">
+<meta name="generator" content="Visual Studio Code">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- 파비콘 -->
+<link rel="icon" type="image/png" href="img/icon/favicon-16.png">
+<link rel="icon" type="image/png" href="img/icon/favicon-32.png">
+<link rel="icon" type="image/png" href="img/icon/favicon-48.png">
+<link rel="icon" type="image/png" href="img/icon/favicon-64.png">
+<link rel="icon" type="image/png" href="img/icon/favicon-128.png">
+
+<title>Mjae's Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+@@if (context.arr) {
+    @@for (var i = 0; i < arr.length; i++) {
+        <script src="`+arr[i]+`" defer></script>
+    }
+}
+
+<!-- HTLM5shiv ie6~8 -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script type="text/javascript">
+        alert("해당 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요.");
+    </script>
+<![endif]-->

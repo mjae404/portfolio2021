@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    .logo {
+        font-size: 30px;
+        color: $white;
+        font-family: 'Roboto', 'Inter', sans-serif;
+        font-weight: bold;
+    }
+
+    &_contact_list {
+        display: none;
+    } // .header_contact_list
+}

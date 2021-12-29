@@ -1,0 +1,31 @@
+<section class="portfolio_title_wrap">
+  <div class="portfolio_cover_img"></div>
+  <div class="portfolio_cover"></div>
+  <h1 class="portfolio_title">@@title</h1>
+  <a href="index.html" class="portfolio_back">뒤로가기</a>
+</section>
+
+<section class="portfolio_detail_container">
+  <div class="portfolio_inner">
+    <div class="portfolio_img_wrap">
+      <img src="@@img_url1" alt="디테일 이미지" class="portfolio_img portfolio_img01">
+      @@if (context.img_url2) {
+      <img src="@@img_url2" alt="디테일 이미지" class="portfolio_img portfolio_img02">
+      }
+      @@if (context.img_url3) {
+      <img src="@@img_url3" alt="디테일 이미지" class="portfolio_img portfolio_img03">
+      }
+    </div>
+    <div class="portfolio_detail_wrap">
+      <h2 class="portfolio_detail_title">@@sub_title</h2>
+      <ul class="portfolio_detail_info">
+        <li class="portfolio_detail_item">@@date</li>
+        <li class="portfolio_detail_item">퍼블리싱 참여도 @@percentage</li>
+      </ul>
+      <div class="portfolio_detail_link_wrap">
+        <a href="@@website" target="_blank" class="portfolio_detail_link">visit website</a>
+      </div>
+      <p class="portfolio_detail_text">@@text</p>
+    </div>
+  </div>
+</section>
