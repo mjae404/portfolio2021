@@ -188,25 +188,33 @@
         </footer>
     </div>
     <script>
-        var heads = document.querySelectorAll('.resume_career_desc_button');
-        [].forEach.call( heads,  function( elem, idx ){
-            elem.addEventListener('click', function( e ){
+        function togglePopup(toggle) {
+            [].forEach.call(toggle, function( elem, idx ){
+                elem.addEventListener('click', function( e ){
                 var tg = e.target.closest('.resume_career_desc');
                 var body  = document.querySelector('body');
                 tg.classList.contains('on') ? tg.classList.remove('on') : tg.classList.add('on');
                 body.classList.toggle('hidden');
-            })
-        });
-        var heads = document.querySelectorAll('.resume_career_desc_close');
-        [].forEach.call( heads,  function( elem, idx ){
+                })
+            });
+        }
+        var button = document.querySelectorAll('.resume_career_desc_button');
+        [].forEach.call( button,  function( elem, idx ){
             elem.addEventListener('click', function( e ){
-                var tg = e.target.closest('.resume_career_desc');
-                var body  = document.querySelector('body');
-                tg.classList.contains('on') ? tg.classList.remove('on') : tg.classList.add('on');
-                body.classList.remove('hidden');
+                elem.setAttribute('aria-expanded','true');
             })
         });
 
+        var close = document.querySelectorAll('.resume_career_desc_close');
+        [].forEach.call( close,  function( elem, idx ){
+            elem.addEventListener('click', function( e ){
+                var tgButton = e.target.closest('.resume_career_desc').querySelector('.resume_career_desc_button');
+                tgButton.setAttribute('aria-expanded','false');
+            })
+        });
+
+        togglePopup(button);
+        togglePopup(close);
     </script>
 </body>
 </html>
