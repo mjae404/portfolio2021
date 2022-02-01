@@ -1,6 +1,5 @@
 var gotop = document.getElementById("goTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -16,4 +15,3 @@ function scrollFunction() {
 gotop.addEventListener('click',(e)=>{
     window.scrollTo({top: 0, behavior: 'smooth'});
 })
-
