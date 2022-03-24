@@ -22,9 +22,12 @@
         <li class="portfolio_detail_item">@@date</li>
         <li class="portfolio_detail_item">퍼블리싱 참여도 @@percentage</li>
       </ul>
-      <div class="portfolio_detail_link_wrap">
-        <a href="@@website" target="_blank" class="portfolio_detail_link">visit website</a>
-      </div>
+
+      @@if (context.website) {
+        <div class="portfolio_detail_link_wrap">
+          <a href="@@website" target="_blank" class="portfolio_detail_link">visit website</a>
+        </div>
+      }
       <p class="portfolio_detail_text">@@text</p>
     </div>
   </div>
